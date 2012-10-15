@@ -1,0 +1,116 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tempo de Geração: Out 15, 2012 as 01:08 PM
+-- Versão do Servidor: 5.0.45
+-- Versão do PHP: 5.2.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Banco de Dados: `espiritolivre`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `adm`
+-- 
+
+CREATE TABLE `adm` (
+  `login` text NOT NULL,
+  `senha` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Extraindo dados da tabela `adm`
+-- 
+
+INSERT INTO `adm` (`login`, `senha`) VALUES 
+('adm', 'adm');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `jogadores`
+-- 
+
+CREATE TABLE `jogadores` (
+  `ID_mesa` int(11) NOT NULL,
+  `ID_pessoal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Extraindo dados da tabela `jogadores`
+-- 
+
+INSERT INTO `jogadores` (`ID_mesa`, `ID_pessoal`) VALUES 
+(1, 1),
+(1, 2),
+(2, 3);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `mesas`
+-- 
+
+CREATE TABLE `mesas` (
+  `ID_mesa` int(11) NOT NULL auto_increment,
+  `Cenario` text NOT NULL,
+  `Sistema` text NOT NULL,
+  `Local` text NOT NULL,
+  `Limite` int(11) NOT NULL,
+  `ID_pessoal` int(11) NOT NULL,
+  PRIMARY KEY  (`ID_mesa`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+-- 
+-- Extraindo dados da tabela `mesas`
+-- 
+
+INSERT INTO `mesas` (`ID_mesa`, `Cenario`, `Sistema`, `Local`, `Limite`, `ID_pessoal`) VALUES 
+(1, 'ases', 'ases', 'ases', 1, 1),
+(2, 'caracua', 'el', 'praça da biblia', 10, 2),
+(3, 'storytaller', 'storytaller', 'cidade nova', 12, 0);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `narradores`
+-- 
+
+CREATE TABLE `narradores` (
+  `ID_mesa` int(11) NOT NULL,
+  `ID_pessoal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Extraindo dados da tabela `narradores`
+-- 
+
+INSERT INTO `narradores` (`ID_mesa`, `ID_pessoal`) VALUES 
+(1, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `pessoal`
+-- 
+
+CREATE TABLE `pessoal` (
+  `ID_pessoal` int(11) NOT NULL auto_increment,
+  `Nome` text NOT NULL,
+  `Fone` text NOT NULL,
+  `Email` text NOT NULL,
+  PRIMARY KEY  (`ID_pessoal`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- 
+-- Extraindo dados da tabela `pessoal`
+-- 
+
+INSERT INTO `pessoal` (`ID_pessoal`, `Nome`, `Fone`, `Email`) VALUES 
+(1, 'nome', '21312331', 'emailsa');
