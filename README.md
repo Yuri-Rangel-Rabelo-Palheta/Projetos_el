@@ -1,4 +1,4 @@
 Projetos_el
 ===========
 
-Projeto do grupo de rpg espirito livre
+Projetos de Cadastro de Membro do Clube Espírito Livre
