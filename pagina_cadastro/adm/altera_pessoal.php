@@ -31,7 +31,7 @@
 
 <p><label>Nome:</label><input name="nome" type="text" class="caixa_texto" size="40" maxlength="200"  value="<?php print $nome; ?>" /></p>
 <p><label>Telefone:</label><input name="telefone" type="text" class="caixa_texto" size="40" maxlength="200"  value="<?php print $dp["Fone"]; ?>" /></p>
-<p><label>Email:</label><input name="email" type="text" class="caixa_texto" size="40" maxlength="200"  value="<?php print $dp_aluno["Email"]; ?>" /></p>
+<p><label>Email:</label><input name="email" type="text" class="caixa_texto" size="40" maxlength="200"  value="<?php print $dp["Email"]; ?>" /></p>
 <p><input type="image" name="imageField" src="imagens/btn_inserir.gif" /></p>
 	
 </div>

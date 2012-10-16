@@ -18,10 +18,9 @@
 include ("../func_espirito.php");
 
 conec_inicio();
-
-$acao= $_GET["acao"];
-
-if ($acao == "cadastro") {
+if(isset($_GET["acao"])):$acao= $_GET["acao"];
+endif;
+if (isset($acao) && $acao == "cadastro") {
 	
 	$cenario = $_POST["Cenario"];
 	$sistema = $_POST["Sistema"];
