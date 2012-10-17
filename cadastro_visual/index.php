@@ -27,16 +27,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-            	<div class="span8"></div>
-                <div class="span4">
-                	<form action="">
-                    	<legend>Cadastra-se.</legend>
-                        
-                    </form>
-                </div>
-            
-            </div>
+            <div class="container">
+	            <div class="row">
+	            	<div class="span8"><img src="img/logo_g.jpg" alt=""></div>
+	                <div class="span4">
+	                	<form action="">
+	                    	<legend>Cadastra-se.</legend>
+	                        
+	                    </form>
+	                </div>
+	            
+	            </div>
+        	</div>
         </div>
     
     </div>
