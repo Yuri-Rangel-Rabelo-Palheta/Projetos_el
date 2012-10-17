@@ -1,4 +1,4 @@
-Projetos_el
+Projeto do Clube de RPG Espirito Livre
 ===========
 
-Projeto do grupo de rpg espirito livre
+Aplicativos web desenvolvidos para o site do Clube de RPG Espirito Livre 
