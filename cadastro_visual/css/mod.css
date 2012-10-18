@@ -1,0 +1,19 @@
+body{
+	padding-top: 60px;
+	padding-bottom: 40px;
+	}
+#titulo_topo{
+	float:right;
+	}
+#home2, #quem-somos{
+	padding-top:32px;
+	}
+#origem{
+	padding-top:90px;
+	}
+#cadastro{
+	padding-top:192px;
+	}
+footer{
+	height:200px;
+	}
