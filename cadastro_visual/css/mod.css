@@ -1,9 +1,11 @@
 body{
-	padding-top: 60px;
 	padding-bottom: 40px;
 	}
 #titulo_topo{
 	float:right;
+	}
+#home{
+	margin-top:60px;
 	}
 #home2, #quem-somos{
 	padding-top:32px;

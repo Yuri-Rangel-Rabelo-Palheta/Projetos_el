@@ -12,7 +12,7 @@
         	<div class="navbar-inner">
             	<div class="container">
                 	<div class="nav-collapse collapse">
-                    	<ul class="nav">
+                    	<ul class="nav" id="menu_top">
                         	<li><a href="#home">Home</a></li>
                         	<li><a href="#origem">A Origem</a></li>
                         	<li><a href="#cadastro">Cadastro</a></li>
@@ -70,7 +70,73 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
         <div id="cadastro" class="container">
         	<div class="row">
             	<div class="span6">
-                
+	                <form action="" class="form-horizontal">
+	                    <div class="control-group">
+	                    	<label class="control-label" for="nome">Nome</label>
+	                        <div class="controls">
+	                        	<input type="text" id="nome" placeholder="Nome Completo">
+	                        </div>
+	                    </div>
+                        <div class="control-group">
+	                    	<label class="control-label" for="cpf">CPF</label>
+	                        <div class="controls">
+	                        	<input type="text" id="cpf" placeholder="CPF">
+	                        </div>
+	                    </div>
+                        <div class="control-group">
+	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
+	                        <div class="controls">
+                            	<input type="text" name="" id="cidade" class="input-medium" placeholder="Cidade">
+	                        	<select name="" id="estado" class="input-mini">
+	                        		<option value="">AC</option>
+	                        		<option value="">AL</option>
+	                        		<option value="">AP</option>
+	                        		<option value="">AM</option>
+	                        		<option value="">BA </option>
+	                        		<option value="">CE</option>
+	                        		<option value="">DF </option>
+	                        		<option value="">ES</option>
+	                        		<option value="">GO</option>
+	                        		<option value="">MA</option>
+	                        		<option value="">MT</option>
+	                        		<option value="">MS</option>
+	                        		<option value="">MG</option>
+	                        		<option value="">PA</option>
+	                        		<option value="">PB</option>
+	                        		<option value="">PR</option>
+	                        		<option value="">PE</option>
+	                        		<option value="">PI</option>
+	                        		<option value="">RJ</option>
+	                        		<option value="">RN</option>
+	                        		<option value="">RS</option>
+	                        		<option value="">RO</option>
+	                        		<option value="">RR</option>
+	                        		<option value="">SC</option>
+	                        		<option value="">SP</option>
+	                        		<option value="">SE</option>
+	                        		<option value="">TO</option>
+	                        	</select>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                    	<label class="control-label" for="email">Email</label>
+	                        <div class="controls">
+	                        	<input type="email" id="email" placeholder="Email">
+	                        </div>
+	                    </div>
+                        <div class="control-group">
+	                    	<label class="control-label" for="senha">Senha</label>
+	                        <div class="controls">
+	                        	<input type="password" id="senha" placeholder="Senha">
+	                        </div>
+	                    </div>
+                         <div class="control-group">
+	                    	<label class="control-label" for="confirma">Confirme</label>
+	                        <div class="controls">
+	                        	<input type="password" id="confirma" placeholder="Confirme a senha">
+	                        </div>
+	                    </div>
+	                </form>
                 </div>
             	<div class="span6">
                 	<h2>Cadastre-se</h2>
@@ -79,7 +145,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                     </p>
                     <p>
                     <h4>Associado Simples</h4>
-                    Participará como playtester dos nossos aplicativo nacional, associado ao <strong>Facebook</strong> com sistema de gerencia de mesas, avaliação, pontuação e muito mais...
+                    Participará como playtester dos nossos aplicativos nacionais, associado ao <strong>Facebook</strong> com sistema de gerencia de mesas, avaliação, pontuação e muito mais...
                     </p>
                     <p>
                     <h4>Associado VIP</h4>
@@ -93,5 +159,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
         </footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slideto.min.js"></script>
+    <script type="text/javascript" src="js/java.js"></script>
   </body>
 </html>
