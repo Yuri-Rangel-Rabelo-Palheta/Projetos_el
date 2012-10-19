@@ -19,4 +19,36 @@ $(document).ready(function(){
 			$('#cidade').html('<option value="">Escolha um estado</option>');
 		}
 	});
+	var ala;
+	$("form input, form select").change(function(){
+		$("form input, form select").each(function(){
+			if($(this).val() != ""){
+				ala=1			
+				}
+				else{
+					ala=0;
+					}
+			});
+		if(ala==1){
+			$("form button").removeAttr("disabled");
+			}
+			else
+			$("form button").attr('disabled','disabled');
+	});
+	$("#cpf").mask("999.999.999-99");
+	$("form").validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+				}
+			},
+			 messages:{
+                email: {
+                    required: "O campo email é obrigatorio.",
+                    email: "O campo email deve conter um email válido."
+                }
+			}
+		});
+		
 });

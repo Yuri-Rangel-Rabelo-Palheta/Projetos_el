@@ -88,7 +88,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
                             	<select name="" id="cidade" class="input-medium">
-                                	<option value=""></option>
+                                	<option value="">Escolha Estado -></option>
                                 </select>
 	                        	<select name="" id="estado" class="input-mini">
                                 	<option value=""></option>
@@ -141,6 +141,11 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                        	<input type="password" id="confirma" placeholder="Confirme a senha">
 	                        </div>
 	                    </div>
+                        <div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn btn-primary" disabled>Cadastrar</button>
+							</div>
+                        </div>
 	                </form>
                 </div>
             	<div class="span6">
@@ -165,6 +170,8 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.slideto.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput-1.3.min.js"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>
     <script type="text/javascript" src="js/java.js"></script>
   </body>
 </html>
