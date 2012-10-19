@@ -71,7 +71,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
         <div id="cadastro" class="container">
         	<div class="row">
             	<div class="span6">
-	                <form action="" class="form-horizontal">
+	                <form id="cad" action="" class="form-horizontal">
 	                    <div class="control-group">
 	                    	<label class="control-label" for="nome">Nome</label>
 	                        <div class="controls">
@@ -92,7 +92,10 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                                 </select>
 	                        	<select name="" id="estado" class="input-mini">
                                 	<option value=""></option>
-                                	<?php get_estados(); ?>
+                                	<?php 
+									if($_SERVER['SERVER_NAME']=!"localhost" || $_SERVER['SERVER_NAME']=!"127.0.0.1"):get_estados(); 
+									endif;
+									?>
 	                        		<!--<option value="">AC</option>
 	                        		<option value="">AL</option>
 	                        		<option value="">AP</option>
@@ -143,7 +146,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    </div>
                         <div class="control-group">
 							<div class="controls">
-								<button type="submit" class="btn btn-primary" disabled>Cadastrar</button>
+								<button type="submit" class="btn btn-primary">Cadastrar</button>
 							</div>
                         </div>
 	                </form>
