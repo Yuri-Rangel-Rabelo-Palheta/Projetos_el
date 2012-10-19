@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+  <?php include("system/funcoes.php"); ?>
+  <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
   <head>
@@ -86,9 +87,13 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
-                            	<input type="text" name="" id="cidade" class="input-medium" placeholder="Cidade">
+                            	<select name="" id="cidade" class="input-medium">
+                                	<option value=""></option>
+                                </select>
 	                        	<select name="" id="estado" class="input-mini">
-	                        		<option value="">AC</option>
+                                	<option value=""></option>
+                                	<?php get_estados(); ?>
+	                        		<!--<option value="">AC</option>
 	                        		<option value="">AL</option>
 	                        		<option value="">AP</option>
 	                        		<option value="">AM</option>
@@ -114,7 +119,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                        		<option value="">SC</option>
 	                        		<option value="">SP</option>
 	                        		<option value="">SE</option>
-	                        		<option value="">TO</option>
+	                        		<option value="">TO</option> -->
 	                        	</select>
 	                        </div>
 	                    </div>
