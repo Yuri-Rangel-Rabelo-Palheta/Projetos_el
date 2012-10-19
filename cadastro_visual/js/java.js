@@ -22,7 +22,12 @@ $(document).ready(function(){
 	$("form#cad").submit(function(){
 		$("form#cad input, form#cad select").each(function(){
 			if($(this).val()==""){
-				$(this).parents().addClass("warning");
+				$(this).parents(".control-group").addClass("error");
+				}
+			else{
+				if($("#senha").val() != $("#confirma").val()){
+					$("#confirma").parents(".control-group").addClass("error");
+					}
 				}
 		});
 		return false;

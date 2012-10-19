@@ -89,12 +89,19 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                        <div class="controls">
                             	<select name="" id="cidade" class="input-medium">
                                 	<option value="">Escolha Estado -></option>
+                                    <?php 
+									if($_SERVER['SERVER_NAME']=="localhost" || $_SERVER['SERVER_NAME']=="127.0.0.1"){
+										echo '<option value="1">Estado</option>'; 
+									}
+									 ?>
                                 </select>
 	                        	<select name="" id="estado" class="input-mini">
                                 	<option value=""></option>
                                 	<?php 
-									if($_SERVER['SERVER_NAME']=!"localhost" || $_SERVER['SERVER_NAME']=!"127.0.0.1"):get_estados(); 
-									endif;
+									if($_SERVER['SERVER_NAME']=!"localhost" || $_SERVER['SERVER_NAME']=!"127.0.0.1"){
+										get_estados(); 
+									}
+									else echo '<option value="1">Cidade</option>';
 									?>
 	                        		<!--<option value="">AC</option>
 	                        		<option value="">AL</option>
