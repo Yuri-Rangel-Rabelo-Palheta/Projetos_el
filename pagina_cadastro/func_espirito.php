@@ -106,4 +106,27 @@ function excluir_jogador($ID_mesa, $ID_pessoal){
 	else
 		return false;
 }
+
+function ger_al_id(){
+	
+	$tc = "pessoal"; $tc2 = "ID_pessoal"; $l = 5;
+	$s = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+	$uid = NULL;
+	$loop = false;
+	
+	do {
+		while (strlen($uid) < $l)
+			$uid .= $s[mt_rand( 0, (strlen($s) - 1) )];
+			
+		if () {
+			$loop = mysql_query("SELECT * FROM `".$tc."` WHERE `".$tc2."` = '".$uid."' LIMIT 1") or die ('Erro ao verificar uid');
+			$loop = mysql_fetch_array($loop);
+			$loop = $loop[0];
+		}  
+		
+	} while($loop);
+	
+	return $uid;
+
+}
 ?>
