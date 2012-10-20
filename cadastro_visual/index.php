@@ -75,13 +75,13 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    <div class="control-group">
 	                    	<label class="control-label" for="nome">Nome</label>
 	                        <div class="controls">
-	                        	<input type="text" id="nome" placeholder="Nome Completo">
+	                        	<input type="text" id="nome" placeholder="Nome Completo" data-original-title="Digite seu nome completo">
 	                        </div>
 	                    </div>
                         <div class="control-group">
 	                    	<label class="control-label" for="cpf">CPF</label>
 	                        <div class="controls">
-	                        	<input type="text" id="cpf" placeholder="CPF">
+	                        	<input type="text" rel="tooltip" id="cpf" placeholder="CPF" data-original-title="Pode ser o do seu responsável.">
 	                        </div>
 	                    </div>
                         <div class="control-group">
@@ -90,7 +90,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                             	<select name="" id="cidade" class="input-medium">
                                 	<option value="">Escolha Estado -></option>
                                     <?php 
-									if($_SERVER['SERVER_NAME']=="localhost" || $_SERVER['SERVER_NAME']=="127.0.0.1"){
+									if($_SERVER['SERVER_NAME']=="localhost"){
 										echo '<option value="1">Estado</option>'; 
 									}
 									 ?>
@@ -98,57 +98,34 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                        	<select name="" id="estado" class="input-mini">
                                 	<option value=""></option>
                                 	<?php 
-									if($_SERVER['SERVER_NAME']=!"localhost" || $_SERVER['SERVER_NAME']=!"127.0.0.1"){
+									if($_SERVER['SERVER_NAME']=="localhost"){
+										echo '<option value="1">Cidade</option>';
+										
+									}
+									else{
 										get_estados(); 
 									}
-									else echo '<option value="1">Cidade</option>';
 									?>
-	                        		<!--<option value="">AC</option>
-	                        		<option value="">AL</option>
-	                        		<option value="">AP</option>
-	                        		<option value="">AM</option>
-	                        		<option value="">BA </option>
-	                        		<option value="">CE</option>
-	                        		<option value="">DF </option>
-	                        		<option value="">ES</option>
-	                        		<option value="">GO</option>
-	                        		<option value="">MA</option>
-	                        		<option value="">MT</option>
-	                        		<option value="">MS</option>
-	                        		<option value="">MG</option>
-	                        		<option value="">PA</option>
-	                        		<option value="">PB</option>
-	                        		<option value="">PR</option>
-	                        		<option value="">PE</option>
-	                        		<option value="">PI</option>
-	                        		<option value="">RJ</option>
-	                        		<option value="">RN</option>
-	                        		<option value="">RS</option>
-	                        		<option value="">RO</option>
-	                        		<option value="">RR</option>
-	                        		<option value="">SC</option>
-	                        		<option value="">SP</option>
-	                        		<option value="">SE</option>
-	                        		<option value="">TO</option> -->
+	                        		
 	                        	</select>
 	                        </div>
 	                    </div>
 	                    <div class="control-group">
 	                    	<label class="control-label" for="email">Email</label>
 	                        <div class="controls">
-	                        	<input type="email" id="email" placeholder="Email">
+	                        	<input type="email" id="email" placeholder="Email" data-original-title="Você receberá as futuras instruções através dele.">
 	                        </div>
 	                    </div>
                         <div class="control-group">
 	                    	<label class="control-label" for="senha">Senha</label>
 	                        <div class="controls">
-	                        	<input type="password" id="senha" placeholder="Senha">
+	                        	<input type="password" id="senha" placeholder="Senha" data-original-title="No minino 6 caracteres.">
 	                        </div>
 	                    </div>
                          <div class="control-group">
 	                    	<label class="control-label" for="confirma">Confirme</label>
 	                        <div class="controls">
-	                        	<input type="password" id="confirma" placeholder="Confirme a senha">
+	                        	<input type="password" id="confirma" placeholder="Confirme a senha" data-original-title="Repita a senha acima.">
 	                        </div>
 	                    </div>
                         <div class="control-group">

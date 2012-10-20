@@ -26,6 +26,7 @@ $(document).ready(function(){
 				}
 			else{
 				if($("#senha").val() != $("#confirma").val()){
+					$("#senha").parents(".control-group").addClass("error");
 					$("#confirma").parents(".control-group").addClass("error");
 					}
 				}
@@ -34,6 +35,6 @@ $(document).ready(function(){
 	});
 	$("#cpf").mask("999.999.999-99");
 	
-		
+		$("#cad input").tooltip({trigger:"focus",animation:"true",placement:"right"});
 		
 });
