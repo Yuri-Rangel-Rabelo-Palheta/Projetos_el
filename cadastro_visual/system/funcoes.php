@@ -16,7 +16,7 @@ function get_estados(){
 
 function cadastro($nome,$cpf,$cidade,$estado,$email,$senha){
 	conexao();
-	$sql = "INSERT INTO ";
+	$sql = "INSERT INTO (id,nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  '','".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0'";
 	fim_conec();
 	}
 
@@ -53,7 +53,7 @@ return $retorno;
 }
 
 function geraCodigo(){
-	$gerado= FALSE;
+	$gerado= TRUE;
 	$codigo=NULL;
 	conexao();
 	while($gerado){
@@ -62,7 +62,7 @@ function geraCodigo(){
 		$res = mysql_query($sql);
 		$num = mysql_num_rows($res);
 		if($num == 0){
-			$gerado=TRUE;
+			$gerado=FALSE;
 			}
 		}
 	return $codigo;

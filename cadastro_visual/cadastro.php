@@ -14,9 +14,9 @@ $acao= $_GET["acao"];
 if ($acao == "cadastro") {
 	
 	$nome = $_POST["nome"];
-	$endereco = $_POST["endereco"];
-	$telefone = $_POST["telefone"];
-	$email = $_POST["email"];
+	$cpf = $_POST["cpf"];
+	$cidade = $_POST["cidade"];
+	$estado = $_POST["estado"];
 	
 	//print $nome;
 	$sql_verif = mysql_query("SELECT * FROM pessoal WHERE Nome = '".$nome."' "); 

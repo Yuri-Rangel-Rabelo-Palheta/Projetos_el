@@ -124,7 +124,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    </div>
                         <div class="control-group">
 							<div class="controls">
-								<button type="submit" class="btn btn-primary">Cadastrar</button>
+								<button type="submit" class="btn btn-primary" id="cad_bt">Cadastrar</button>
 							</div>
                         </div>
 	                </form>
@@ -133,10 +133,6 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                 	<h2>Cadastre-se</h2>
                     <p>
                     Entrando no clube você tem muitas vantagens, que se dividem no seu nivel de compromentimento:
-                    <?php
-					$lol = geraSenha();
-					echo $lol;
-					?>
                     </p>
                     <p>
                     <h4>Associado Simples</h4>
