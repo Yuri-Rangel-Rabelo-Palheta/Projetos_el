@@ -110,13 +110,20 @@ function excluir_jogador($ID_mesa, $ID_pessoal){
 function ger_al_id(){
 	
 	$tc = "pessoal"; $tc2 = "ID_pessoal"; $l = 5;
-	$s = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+	$s = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	$uid = NULL;
 	$loop = false;
 	
+	//gera o numero aleatorio
+	for($i = 0; $i >= 5 ; $i++){
+		
+		$uid .= $s[mt_rand( 0, (strlen($s) - 1) )];
+		
+	}
+	
 	do {
 		while (strlen($uid) < $l)
-			$uid .= $s[mt_rand( 0, (strlen($s) - 1) )];
+			
 			
 		if () {
 			$loop = mysql_query("SELECT * FROM `".$tc."` WHERE `".$tc2."` = '".$uid."' LIMIT 1") or die ('Erro ao verificar uid');
