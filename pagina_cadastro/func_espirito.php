@@ -109,7 +109,7 @@ function excluir_jogador($ID_mesa, $ID_pessoal){
 
 function ger_al_id(){
 	
-	$tc = "pessoal"; $tc2 = "ID_pessoal"; $l = 5;
+	$l = 5;
 	$s = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	$uid = NULL;
 	$loop = false;
@@ -120,13 +120,13 @@ function ger_al_id(){
 		$uid .= $s[mt_rand( 0, (strlen($s) - 1) )];
 		
 	}
-	
+	return $uid;
 	do {
 		while (strlen($uid) < $l)
 			
 			
 		if ($loop) {
-			$loop = mysql_query("SELECT * FROM `".$tc."` WHERE `".$tc2."` = '".$uid."' LIMIT 1") or die ('Erro ao verificar uid');
+			$loop = mysql_query("SELECT * FROM pessoal WHERE ID_pessoal = '".$uid."'") or die ('Erro ao verificar uid');
 			$loop = mysql_fetch_array($loop);
 			$loop = $loop[0];
 		}  
