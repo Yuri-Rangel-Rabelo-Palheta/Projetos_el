@@ -113,13 +113,13 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="senha">Senha</label>
 	                        <div class="controls">
-	                        	<input type="password" id="senha" placeholder="Senha" data-original-title="Deve ter entre 6 e 12 caracteres.">
+	                        	<input type="password" id="senha" maxlength="12" placeholder="Senha" data-original-title="Deve ter entre 6 e 12 caracteres.">
 	                        </div>
 	                    </div>
                          <div class="control-group">
 	                    	<label class="control-label" for="confirma">Confirme</label>
 	                        <div class="controls">
-	                        	<input type="password" id="confirma" placeholder="Confirme a senha" data-original-title="Repita a senha acima.">
+	                        	<input type="password" id="confirma" maxlength="12" placeholder="Confirme a senha" data-original-title="Repita a senha acima.">
 	                        </div>
 	                    </div>
                         <div class="control-group">
@@ -154,17 +154,21 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                <form action="" class="form">
 	                	<div class="control-group">
                             <div class="controls">
-                            	<input type="text" name="" id="nome" placeholder="Nome">
+                            	<div class="input-prepend">
+                            		<span class="add-on"><i class="icon-user"></i></span><input type="text" name="" id="nome" placeholder="Nome" class="input-xlarge">
+                                </div>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="controls">
-                            	<input type="text" name="" id="email" placeholder="E-mail">
+                            	<div class="input-prepend">
+                            		<span class="add-on">@</span><input type="text" name="" id="email" placeholder="E-mail" class="input-xlarge">                                
+                                </div>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="controls">
-                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-xxlarge"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn" id="cont_bt"><i class="icon-envelope"></i> Enviar</button>	
