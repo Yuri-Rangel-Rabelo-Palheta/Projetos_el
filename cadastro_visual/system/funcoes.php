@@ -55,9 +55,9 @@ return $retorno;
 function geraCodigo(){
 	$gerado= FALSE;
 	$codigo=NULL;
-		conexao();
+	conexao();
 	while($gerado){
-		$codigo=geraSenha();
+		$codigo= geraSenha();
 		$sql = "SELECT * FROM usuarios WHERE codigo ='".$codigo."' ";
 		$res = mysql_query($sql);
 		$num = mysql_num_rows($res);

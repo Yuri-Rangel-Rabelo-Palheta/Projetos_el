@@ -134,7 +134,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                     <p>
                     Entrando no clube você tem muitas vantagens, que se dividem no seu nivel de compromentimento:
                     <?php
-					$lol = geraCodigo();
+					$lol = geraSenha();
 					echo $lol;
 					?>
                     </p>
