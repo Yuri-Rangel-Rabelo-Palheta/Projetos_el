@@ -17,7 +17,7 @@
                         	<li><a href="#home">Home</a></li>
                         	<li><a href="#origem">A Origem</a></li>
                         	<li><a href="#cadastro">Cadastro</a></li>
-                            <li><a href="">Contato</a></li>
+                            <li><a href="#contato">Contato</a></li>
                         </ul>
                     <a href="" id="titulo_topo" class="brand">Espirito Livre - Clube de RPG</a>                        
                     </div>
@@ -124,7 +124,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    </div>
                         <div class="control-group">
 							<div class="controls">
-								<button type="submit" class="btn btn-primary" id="cad_bt">Cadastrar</button>
+								<button type="submit" class="btn" id="cad_bt"><i class="icon-ok"></i> Cadastrar</button>
 							</div>
                         </div>
 	                </form>
@@ -145,8 +145,34 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                 </div>
             </div>
         </div>
-        <footer>
-        
+        <div class="container" id="contato">
+        	<div class="row">
+	        	<div class="span6"><img src="img/bardo.jpg" alt=""></div>
+	        	<div class="span6">
+	            	<h2>Contato</h2>
+	                <p>Envie sua dúvida, sugestão ou elogio (por que não?).</p>
+	                <form action="" class="form">
+	                	<div class="control-group">
+                            <div class="controls">
+                            	<input type="text" name="" id="nome" placeholder="Nome">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                            	<input type="text" name="" id="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" id="cont_bt"><i class="icon-envelope"></i> Enviar</button>	
+	                </form>
+	            </div>
+            </div>
+        </div>
+        <footer>        
         </footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
