@@ -1,5 +1,5 @@
-  <?php include("system/funcoes.php"); ?>
-  <!DOCTYPE html>
+<?php include("system/funcoes.php"); ?>
+<!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
   <head>
@@ -88,23 +88,17 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
                             	<select name="" id="cidade" class="input-medium">
-                                	<option value="">Escolha Estado -></option>
+                                	<option value="">Escolha Estado-></option>
                                     <?php 
-									if($_SERVER['SERVER_NAME']=="localhost"){
-										echo '<option value="1">Estado</option>'; 
-									}
+										if($_SERVER['SERVER_NAME']=="localhost"){
+											echo '<option value="29">Teste</option>';
+											}
 									 ?>
                                 </select>
 	                        	<select name="" id="estado" class="input-mini">
                                 	<option value=""></option>
                                 	<?php 
-									if($_SERVER['SERVER_NAME']=="localhost"){
-										echo '<option value="1">Cidade</option>';
-										
-									}
-									else{
-										get_estados(); 
-									}
+									get_estados(); 
 									?>
 	                        		
 	                        	</select>
@@ -119,7 +113,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="senha">Senha</label>
 	                        <div class="controls">
-	                        	<input type="password" id="senha" placeholder="Senha" data-original-title="No minino 6 caracteres.">
+	                        	<input type="password" id="senha" placeholder="Senha" data-original-title="Deve ter entre 6 e 12 caracteres.">
 	                        </div>
 	                    </div>
                          <div class="control-group">
@@ -139,6 +133,10 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                 	<h2>Cadastre-se</h2>
                     <p>
                     Entrando no clube você tem muitas vantagens, que se dividem no seu nivel de compromentimento:
+                    <?php
+					$lol = geraCodigo();
+					echo $lol;
+					?>
                     </p>
                     <p>
                     <h4>Associado Simples</h4>

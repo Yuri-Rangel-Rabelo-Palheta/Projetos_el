@@ -16,7 +16,7 @@ $(document).ready(function(){
 				$('#cidade').html(options).show();
 			});
 		} else {
-			$('#cidade').html('<option value="">Escolha um estado</option>');
+			//$('#cidade').html('<option value="">Escolha um estado</option>');
 		}
 	});
 	$("form#cad").submit(function(){
@@ -25,6 +25,7 @@ $(document).ready(function(){
 				$(this).parents(".control-group").addClass("error");
 				}
 			else{
+				$(this).parents(".control-group").removeClass("error");
 				if($("#senha").val() != $("#confirma").val()){
 					$("#senha").parents(".control-group").addClass("error");
 					$("#confirma").parents(".control-group").addClass("error");
