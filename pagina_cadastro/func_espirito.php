@@ -125,7 +125,7 @@ function ger_al_id(){
 		while (strlen($uid) < $l)
 			
 			
-		if () {
+		if ($loop) {
 			$loop = mysql_query("SELECT * FROM `".$tc."` WHERE `".$tc2."` = '".$uid."' LIMIT 1") or die ('Erro ao verificar uid');
 			$loop = mysql_fetch_array($loop);
 			$loop = $loop[0];
