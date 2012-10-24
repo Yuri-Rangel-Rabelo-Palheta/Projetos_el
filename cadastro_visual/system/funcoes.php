@@ -15,8 +15,9 @@ function get_estados(){
 	}
 
 function cadastro($nome,$cpf,$cidade,$estado,$email,$senha){
+	$codigo=geraCodigo();
 	conexao();
-	$sql = "INSERT INTO (id,nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  '','".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0'";
+	$sql = "INSERT INTO usuarios(nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0'";
 	fim_conec();
 	}
 

@@ -23,12 +23,12 @@ $(document).ready(function(){
 	
 	// Validação, só falta a limitação de tamanho pra senha.
 	$("form#cad").submit(function(){
-		var nome = $("#nome").val();
-		var cpf = $("#cpf").val();
-		var estado = $("#estado").val();
-		var cidade = $("#cidade").val();
-		var email = $("#email").val();
-		var senha = $("#senha").val();
+		var nome = $("form#cad #nome").val();
+		var cpf = $("form#cad #cpf").val();
+		var estado = $("form#cad #estado").val();
+		var cidade = $("form#cad #cidade").val();
+		var email = $("form#cad #email").val();
+		var senha = $("form#cad #senha").val();
 		
 		var dados ="acao=cadastro&nome="+nome+"&cpf="+cpf+"&estado="+estado+"&cidade="+cidade+"&email="+email+"&senha="+senha;
 		
@@ -45,8 +45,19 @@ $(document).ready(function(){
 					
 					else{ // Depois de todas essas validações, finalmente o cadastro
 						
-						// EM BREVE
-						
+						$.ajax({
+							type: "POST",
+							url: "cadastro.php",
+							data: dados,
+							cache: false,
+							success: function(){
+								$("#contato_enviando p").html('<center><img src="images/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
+								$("#contato_enviando h3").html('Mensagem Enviada');
+								$("input:text, textarea").val("");
+								setTimeout(some,2000);
+								}
+							});
+
 						}
 					
 				}
