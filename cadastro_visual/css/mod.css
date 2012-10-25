@@ -19,6 +19,9 @@ body{
 #cad{
 	padding-top:25px;
 	}
+#cad #s_conf{
+	opacity:0;
+	}
 #contato{
 	padding-top:140px;
 	}

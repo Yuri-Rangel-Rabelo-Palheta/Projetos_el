@@ -120,6 +120,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                    	<label class="control-label" for="confirma">Confirme</label>
 	                        <div class="controls">
 	                        	<input type="password" id="confirma" maxlength="12" placeholder="Confirme a senha" data-original-title="Repita a senha acima.">
+                                <span class="help-block" id="s_conf">Senha e Confirmação diferentes.</span>
 	                        </div>
 	                    </div>
                         <div class="control-group">
@@ -178,8 +179,9 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
         </div>
         <footer>        
         </footer>
+        <?php include("contato_msg.php"); ?>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.slideto.min.js"></script>
     <script type="text/javascript" src="js/jquery.maskedinput-1.3.min.js"></script>
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>

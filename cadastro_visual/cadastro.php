@@ -6,30 +6,27 @@
 </head>
 
 <body>
-<?php include ("../func_espirito.php");
-conec_inicio();
+<?php include ("system/funcoes.php");
 
-$acao= $_GET["acao"];
+$acao= $_POST["acao"];
 
 if ($acao == "cadastro") {
 	
 	$nome = $_POST["nome"];
 	$cpf = $_POST["cpf"];
 	$cidade = $_POST["cidade"];
+	$email = $_POST["email"];
 	$estado = $_POST["estado"];
+	$senha = $_POST["senha"];
+	$codigo = "sdasd";
 	
-	//print $nome;
-	$sql_verif = mysql_query("SELECT * FROM pessoal WHERE Nome = '".$nome."' "); 
-        if (mysql_num_rows($sql_verif) == 1) { 
-            echo "<script language='javascript'>alert('Não foi possivel realizar o cadastro no momento pois o usuario ja existe')</script>"; //se sim mostra mensagem 
-			exit;
-        }
-	if(inserir_cadastro($nome, $telefone, $email, $endereco)){
-		echo "<script language='javascript'>alert('Cadastro efetuado com sucesso')</script>";
-	}
+	if(cadastro($nome,$cpf,$cidade,$estado,$email,$senha,$codigo)){
+		echo "Cadastro enviado. Aguarde mais informações via email.";
+		}
 	else{
-		echo "<script language='javascript'>alert('Não foi possivel realizar o cadastro no momento')</script>";
-	}
+		echo "Falha no cadastro. Tente mais tarde.";
+		}
+	
 }
 
 ?>

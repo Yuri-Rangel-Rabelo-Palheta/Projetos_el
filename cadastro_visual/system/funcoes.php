@@ -14,11 +14,15 @@ function get_estados(){
 	
 	}
 
-function cadastro($nome,$cpf,$cidade,$estado,$email,$senha){
-	$codigo=geraCodigo();
+function cadastro($nome,$cpf,$cidade,$estado,$email,$senha, $codigo){
 	conexao();
 	$sql = "INSERT INTO usuarios(nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0'";
-	fim_conec();
+	if($res = mysql_query( $sql )){
+		return TRUE;
+		}
+	else{
+		return FALSE;
+		}
 	}
 
 
