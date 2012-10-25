@@ -16,7 +16,7 @@ function get_estados(){
 
 function cadastro($nome,$cpf,$cidade,$estado,$email,$senha, $codigo){
 	conexao();
-	$sql = "INSERT INTO usuarios(nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0'";
+	$sql = "INSERT INTO usuarios(nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0')";
 	if($res = mysql_query( $sql )){
 		return TRUE;
 		}
