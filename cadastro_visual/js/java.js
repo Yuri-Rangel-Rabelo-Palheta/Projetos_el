@@ -39,11 +39,14 @@ $(document).ready(function(){
 		var senha = $("form#cad #senha").val();
 		
 		var dados ="acao=cadastro&nome="+nome+"&cpf="+cpf+"&estado="+estado+"&cidade="+cidade+"&email="+email+"&senha="+senha;
+		var valido = true;
 		
 		$("form#cad input, form#cad select").each(function(){
 			if($(this).val()==""){
 				$(this).parents(".control-group").addClass("error");
 				$("#s_conf").css("opacity","0");
+				valido = false;
+				
 				}
 			else{
 				$(this).parents(".control-group").removeClass("error");
@@ -51,10 +54,10 @@ $(document).ready(function(){
 					$("#senha").parents(".control-group").addClass("error");
 					$("#confirma").parents(".control-group").addClass("error");
 					$("#s_conf").css("opacity","1");
+					valido = false;					
 					}
-					
-					else{ // Depois de todas essas validações, finalmente o cadastro
-						if(i==0){
+					/*else{ // Depois de todas essas validações, finalmente o cadastro
+						
 						$("#contato_enviando h3").html('Enviando cadastro...');
 						$('#contato_enviando').modal({backdrop:"static"});
 						$('#contato_enviando').modal("show");
@@ -70,12 +73,29 @@ $(document).ready(function(){
 								setTimeout(some,2000);
 								}
 							});
-							i++;}
-
-						}
-					
+  							
+						}*/
 				}
 		});
+		
+		if(valido){
+						$("#contato_enviando h3").html('Enviando cadastro...');
+						$('#contato_enviando').modal({backdrop:"static"});
+						$('#contato_enviando').modal("show");
+						$("#s_conf").css("opacity","0");
+						$.ajax({
+							type: "POST",
+							url: "cadastro.php",
+							data: dados,
+							cache: false,
+							success: function(){
+								$("#contato_enviando p").html('<center>Você receberá mais informações no seu email. <br><img src="img/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
+								$("#contato_enviando h3").html('Cadastro enviado');
+								setTimeout(some,2000);
+								}
+							});
+			
+			}
 		return false;
 	});
 	

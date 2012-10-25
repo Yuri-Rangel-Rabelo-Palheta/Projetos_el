@@ -18,7 +18,7 @@ if ($acao == "cadastro") {
 	$email = $_POST["email"];
 	$estado = $_POST["estado"];
 	$senha = $_POST["senha"];
-	$codigo = "sdasd";
+	$codigo = geraCodigo();
 	
 	if(cadastro($nome,$cpf,$cidade,$estado,$email,$senha,$codigo)){
 		echo "Cadastro enviado. Aguarde mais informações via email.";
