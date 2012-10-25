@@ -30,7 +30,7 @@
 				<div class="span5">
 	                <div id="home2" class="row">
                     	<h2>Vamos jogar RPG?</h2>   
-	                    <p>
+	                    <p> 
 	                    O <strong>Clube de RPG Espírito Livre</strong> é uma iniciativa que visa reunir mestres/narradores/jogadores de RPG de todo o Brasil, organizados com um único objetivo: fazer a cultura RPGista crescer.
                         </p>
                         <p> Através da realização de eventos, parcerias com editoras e livrarias, sorteios, aquisição de novos espaços para a prática do RPG, e principalmente, a atração de cada vez mais novos praticantes de nosso adorado hobby, vamos fazer do Clube de RPG Espírito Livre uma referência não apenas nacional, mas talvez para além de nossas fronteiras...afinal, qual o limite para quem tem Espírito Livre? 

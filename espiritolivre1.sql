@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2
+-- version 3.3.10deb2
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tempo de Geração: 
--- Versão do Servidor: 5.5.25a
--- Versão do PHP: 5.4.4
+-- Servidor: 186.202.122.28
+-- Tempo de Geração: Out 25, 2012 as 04:21 PM
+-- Versão do Servidor: 5.1.63
+-- Versão do PHP: 5.3.3-7+squeeze14
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,7 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `espiritolivre1`
+-- Banco de Dados: `el`
 --
 
 -- --------------------------------------------------------
@@ -10126,7 +10125,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `estado` int(15) NOT NULL,
   `cidade` int(15) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(12) NOT NULL,
+  `senha` text NOT NULL,
   `codigo` varchar(8) NOT NULL,
   `admin` tinyint(1) NOT NULL,
   `data_de_entrada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -10135,6 +10134,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
