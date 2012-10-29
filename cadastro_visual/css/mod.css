@@ -25,6 +25,8 @@ body{
 #contato{
 	padding-top:140px;
 	}
-footer{
-	height:200px;
+#footer{
+	margin-top:50px;
+	padding-top:30px;
+	border-top:1px solid #999;
 	}

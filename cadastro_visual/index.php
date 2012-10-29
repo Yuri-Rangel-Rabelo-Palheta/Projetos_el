@@ -177,8 +177,23 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	            </div>
             </div>
         </div>
-        <footer>        
-        </footer>
+        <div class="container" id="footer">
+        	<div class="row">
+            	<div class="span8">
+                <p>
+                	<strong>ESPÍRITO LIVRE | Clube de RPG</strong> - <?php echo date("Y"); ?> <br>
+                    <em>"Abra sua mente, liberte seu espírito."</em><br>
+                	espiritolivrerpg@gmail.com
+                </p>
+                </div>
+                <div class="span4">
+                	<a href="http://espiritolivrerpg.blogspot.com/" title="Blog"><img src="img/blogger64.png" alt=""></a>
+                    <a href="http://www.facebook.com/pages/Clube-de-RPG-Esp%C3%ADrito-Livre/232916940100586" title="Página"><img src="img/face64.png" alt=""></a>
+                    <a href="http://www.facebook.com/groups/espiritolivrerpg/" title="Grupo"><img src="img/face64.png" alt=""></a>                    
+                    <a href="https://twitter.com/espiritolivrer" title="Twitter"><img src="img/twitter64.png" alt=""></a>
+                </div>
+            </div>
+        </div>
         <?php include("contato_msg.php"); ?>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
