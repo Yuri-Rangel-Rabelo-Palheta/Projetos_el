@@ -26,7 +26,7 @@ if ($acao == "cadastro") {
 	else{
 		echo "Falha no cadastro. Tente mais tarde.";
 		}
-	
+	emailUser($nome,$email);
 }
 
 ?>
