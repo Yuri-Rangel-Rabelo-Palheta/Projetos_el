@@ -18,6 +18,7 @@
                         	<li><a href="#origem">A Origem</a></li>
                         	<li><a href="#cadastro">Cadastro</a></li>
                             <li><a href="#contato">Contato</a></li>
+                            <li><a href="http://espiritolivrerpg.blogspot.com/" target="_blank">Blog</a></li>
                         </ul>
                     <a href="" id="titulo_topo" class="brand">Espirito Livre - Clube de RPG</a>                        
                     </div>
@@ -152,7 +153,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	        	<div class="span6">
 	            	<h2>Contato</h2>
 	                <p>Envie sua dúvida, sugestão ou elogio (por que não?).</p>
-	                <form action="" class="form">
+	                <form action="" class="form" id="mens_form">
 	                	<div class="control-group">
                             <div class="controls">
                             	<div class="input-prepend">

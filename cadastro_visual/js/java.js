@@ -91,6 +91,7 @@ $(document).ready(function(){
 							success: function(){
 								$("#contato_enviando p").html('<center>Você receberá mais informações no seu email. <br><img src="img/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
 								$("#contato_enviando h3").html('Cadastro enviado');
+								$("form#cad input:text, form#cad textarea").val("");
 								setTimeout(some,2000);
 								}
 							});
@@ -98,6 +99,41 @@ $(document).ready(function(){
 			}
 		return false;
 	});
+	// Contato Via Ajax
+	$("#contato_enviando").on('hidden',function(){
+			$("#contato_enviando p").html('<center><img src="images/loading2.gif" alt=""></center>');
+			$("#contato_enviando h3").html('Enviando sua mensagem...');
+		});
+	var some=function(){$('#contato_enviando').modal('hide')};
+	
+	$("#mens_form #cont_bt").click(function(){
+		var nome=$("#mens_form #nome").val();
+		var email=$("#mens_form #email").val();
+		var mens=$("#mens_form #mens").val();
+		var dados="nome="+nome+"&email="+email+"&mens="+mens;
+		if(nome =='' || email =='' || mens==''){
+			$('#contato_vazio').modal("show");
+			}
+		else{
+			$("#contato_enviando h3").html('Enviando mensagem...');
+			$('#contato_enviando').modal({backdrop:"static"});
+			$('#contato_enviando').modal("show");
+			$.ajax({
+				type: "POST",
+				url: "mail_contato.php",
+				data: dados,
+				cache: false,
+				success: function(){
+					$("#contato_enviando p").html('<center><img src="images/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
+					$("#contato_enviando h3").html('Mensagem Enviada');
+					$("#mens_form input:text, #mens_form textarea").val("");
+					setTimeout(some,2000);
+				}
+				
+				});
+		}
+		return false;
+		});
 	
 	// Máscara do CPF
 	$("#cpf").mask("999.999.999-99");
