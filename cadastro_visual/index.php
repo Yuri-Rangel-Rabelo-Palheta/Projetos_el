@@ -170,7 +170,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         </div>
                         <div class="control-group">
                             <div class="controls">
-                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-xxlarge"></textarea>
+                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-xlarge"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn" id="cont_bt"><i class="icon-envelope"></i> Enviar</button>	
@@ -188,10 +188,10 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                 </p>
                 </div>
                 <div class="span4">
-                	<a href="http://espiritolivrerpg.blogspot.com/" title="Blog"><img src="img/blogger64.png" alt=""></a>
-                    <a href="http://www.facebook.com/pages/Clube-de-RPG-Esp%C3%ADrito-Livre/232916940100586" title="Página"><img src="img/face64.png" alt=""></a>
-                    <a href="http://www.facebook.com/groups/espiritolivrerpg/" title="Grupo"><img src="img/face64.png" alt=""></a>                    
-                    <a href="https://twitter.com/espiritolivrer" title="Twitter"><img src="img/twitter64.png" alt=""></a>
+                	<a target="_blank" href="http://espiritolivrerpg.blogspot.com/" title="Blog"><img src="img/blogger64.png" alt=""></a>
+                    <a target="_blank" href="http://www.facebook.com/pages/Clube-de-RPG-Esp%C3%ADrito-Livre/232916940100586" title="Página"><img src="img/face64.png" alt=""></a>
+                    <a target="_blank" href="http://www.facebook.com/groups/espiritolivrerpg/" title="Grupo"><img src="img/face64.png" alt=""></a>                    
+                    <a target="_blank" href="https://twitter.com/espiritolivrer" title="Twitter"><img src="img/twitter64.png" alt=""></a>
                 </div>
             </div>
         </div>
