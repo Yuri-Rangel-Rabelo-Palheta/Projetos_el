@@ -28,7 +28,12 @@ if ($acao == "cadastro") {
 		}
 	emailUser($nome,$email);
 }
-
+if ($acao == "mensagem"){
+	$nome = $_POST["nome"];
+	$email = $_POST["email"];
+	$mens = $_POST["mens"];
+	
+	}
 ?>
 </body>
 </html>

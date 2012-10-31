@@ -51,7 +51,7 @@ function emailUser($nome,$email){
        $body = '<meta charset="UTF-8">
 Olá <strong>'.$nome.',</strong><br>
 <br>
-Este email foi usado para o seu cadastro no <strong>Clube de RPG - Espírito Livre</strong>, não o perca pois ele é o nosso principal de comunicação. Acompanhe o andamento do nosso projeto:<br><br>
+Este email foi usado para o seu cadastro no <strong>Clube de RPG - Espírito Livre</strong>, não o perca pois ele é o nosso principal meio de comunicação. Acompanhe o andamento do nosso projeto:<br><br>
 <div style="text-align:center">
 <strong>Facebook:</strong> <a href="http://www.facebook.com/groups/espiritolivrerpg/">Grupo</a> / <a href="http://www.facebook.com/pages/Espirito-Livre-Grupo-de-RPG/232916940100586">Página</a> | 
 <strong><a href="http://twitter.com/espiritolivrer">Twitter</a></strong> | 
@@ -68,7 +68,47 @@ Aguarde, entraremos em contato em breve.
        $mail->MsgHTML($body);
 
 
-        $mensagem = "";
+       if($mail->Send())
+		   echo "Email enviado";
+
+        else
+            echo "Falha no Envio";
+
+
+      }
+}
+
+function emailContato($nome,$email,$mens){
+
+      if(empty($email))
+      {
+        $alert = "<div id=\"alert\" class=\"erro\"><b>Preencha o campo com seu email <b></div>";
+      }
+      
+
+      else
+      {
+        require('PHPMailer/class.phpmailer.php');
+
+       $mail = new PHPMailer();
+       $mail->IsSMTP();
+	   $mail->Host = 'smtp.googlemail.com';
+       $mail->SMTPAuth = true;
+       $mail->Port = 587;
+	   $mail->SMTPSecure = 'tls';
+       $mail->Username = 'espiritolivrerpg@gmail.com';
+       $mail->Password = 'mente.espirito1';
+       $mail->SetFrom('espiritolivrerpg@gmail.com', 'Mensagem Via Site');
+       $mail->AddAddress('espiritolivrerpg@gmail.com', 'Contato');
+       $mail->Subject = 'Mensagem Nova ( Clube EL )';
+
+       $body = '<meta charset="UTF-8">
+	   			<strong>    Nome:</strong>'.$nome.'<br>
+				<strong>  E-mail:</strong>'.$email.'<br>
+				<strong>Mensagem:</strong>'.$mens;
+
+
+       $mail->MsgHTML($body);
 
 
        if($mail->Send())
@@ -80,7 +120,48 @@ Aguarde, entraremos em contato em breve.
 
       }
 }
+function emailNvCadastrp($nome,$email){
 
+      if(empty($email))
+      {
+        $alert = "<div id=\"alert\" class=\"erro\"><b>Preencha o campo com seu email <b></div>";
+      }
+      
+
+      else
+      {
+        require('PHPMailer/class.phpmailer.php');
+
+       $mail = new PHPMailer();
+       $mail->IsSMTP();
+	   $mail->Host = 'smtp.googlemail.com';
+       $mail->SMTPAuth = true;
+       $mail->Port = 587;
+	   $mail->SMTPSecure = 'tls';
+       $mail->Username = 'espiritolivrerpg@gmail.com';
+       $mail->Password = 'mente.espirito1';
+       $mail->SetFrom('espiritolivrerpg@gmail.com', 'Mensagem Via Site');
+       $mail->AddAddress('espiritolivrerpg@gmail.com', 'Contato');
+       $mail->Subject = 'Novo Cadastro! ( Clube EL )';
+
+       $body = '<meta charset="UTF-8">
+	   			<h1>Novo Usuário Cadastrado no Clube! o/</h1>
+	   			<strong>    Nome:</strong>'.$nome.'<br>
+				<strong>  E-mail:</strong>'.$email;
+
+
+       $mail->MsgHTML($body);
+
+
+       if($mail->Send())
+		   echo "Email enviado";
+
+        else
+            echo "Falha no Envio";
+
+
+      }
+}
 
 
 function geraSenha($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false){
