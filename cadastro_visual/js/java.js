@@ -72,7 +72,7 @@ $(document).ready(function(){
 							success: function(){
 								$("#contato_enviando p").html('<center>Você receberá mais informações no seu email. <br><img src="img/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
 								$("#contato_enviando h3").html('Cadastro enviado');
-								$("form#cad input:text, form#cad textarea").val("");
+								$("form#cad input, form#cad textarea").val("");
 								setTimeout(some,2000);
 								}
 							});
@@ -116,7 +116,7 @@ $(document).ready(function(){
 				success: function(){
 					$("#contato_enviando p").html('<center><img src="img/email-send-icon.png" alt=""></center>').find('center').hide().fadeIn("slow");
 					$("#contato_enviando h3").html('Mensagem Enviada');
-					$("#mens_form input:text, #mens_form textarea").val("");
+					$("#mens_form input, #mens_form textarea").val("");
 					setTimeout(some,2000);
 				}
 				

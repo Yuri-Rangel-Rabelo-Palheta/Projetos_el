@@ -20,6 +20,10 @@ if($_SERVER['SERVER_NAME']=="espiritolivrerpg.com.br"){
 	}
 $conexao = mysql_connect($mysql_host,$mysql_user,$mysql_password);
 $db = mysql_select_db($mysql_database, $conexao);
+mysql_query("SET NAMES 'utf8'");
+mysql_query('SET character_set_connection=utf8');
+mysql_query('SET character_set_client=utf8');
+mysql_query('SET character_set_results=utf8');
 
 }
 function fim_conec(){
