@@ -13,14 +13,15 @@ $acao= $_POST["acao"];
 if ($acao == "cadastro") {
 	
 	$nome = $_POST["nome"];
-	$cpf = $_POST["cpf"];
+	$endereco = $_POST["endereco"];
+	$cep = $_POST["cep"];
 	$cidade = $_POST["cidade"];
 	$email = $_POST["email"];
 	$estado = $_POST["estado"];
 	$senha = $_POST["senha"];
 	$codigo = geraCodigo();
 	
-	if(cadastro($nome,$cpf,$cidade,$estado,$email,$senha,$codigo)){
+	if(cadastro($nome,$endereco,$cep,$cidade,$estado,$email,$senha,$codigo)){
 		echo "Cadastro enviado. Aguarde mais informações via email.";
 		}
 	else{
@@ -33,6 +34,7 @@ if ($acao == "mensagem"){
 	$email = $_POST["email"];
 	$mens = $_POST["mens"];
 	
+	emailContato($nome,$email,$mens);
 	}
 ?>
 </body>

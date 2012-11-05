@@ -13,10 +13,10 @@ function get_estados(){
 	fim_conec();
 	}
 
-function cadastro($nome,$cpf,$cidade,$estado,$email,$senha, $codigo){
+function cadastro($nome,$endereco,$cep,$cidade,$estado,$email,$senha, $codigo){
 	conexao();
 	$senha = md5($senha);
-	$sql = "INSERT INTO usuarios(nome,cpf,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$cpf."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0')";
+	$sql = "INSERT INTO usuarios(nome,endereco,cep,cidade,estado,email,senha,codigo,admin) VALUES  ('".$nome."','".$endereco."','".$cep."','".$cidade."','".$estado."','".$email."','".$senha."','".$codigo."','0')";
 	if($res = mysql_query( $sql )){
 		return TRUE;
 		}

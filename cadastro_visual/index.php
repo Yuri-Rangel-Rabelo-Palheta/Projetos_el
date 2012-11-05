@@ -80,9 +80,16 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
 	                        </div>
 	                    </div>
                         <div class="control-group">
-	                    	<label class="control-label" for="cpf">CPF</label>
+	                    	<label class="control-label" for="endereco">Endereço</label>
 	                        <div class="controls">
-	                        	<input type="text" rel="tooltip" id="cpf" placeholder="CPF" data-original-title="Pode ser o do seu responsável.">
+	                        	<input type="text" rel="tooltip" id="endereco" placeholder="Endereço com Bairro" data-original-title="Endereço completo, e não se esqueça do bairro!">
+	                        </div>
+	                    </div>
+
+                        <div class="control-group">
+	                    	<label class="control-label" for="cep">CEP</label>
+	                        <div class="controls">
+	                        	<input type="text" rel="tooltip" id="cep" placeholder="CEP" data-original-title="Necessário para o envio da carteira.">
 	                        </div>
 	                    </div>
                         <div class="control-group">
@@ -143,6 +150,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                     <p>
                     <h4>Associado VIP</h4>
                     Pelo valor <strong>anual</strong> de 15 reais, desfrutará de desconto na compra de material nas editoras/lojas parceiras, sorteios de material e narradores terão brindes garantidos nos eventos do clube. No futuro, desconto em filmes e eventos do meio nerd/geek/otaku. <br>
+                   <a href="docs/inscricao_el.pdf" target="_blank">Veja como se tornar VIP!</a> 
                     </p>
                 </div>
             </div>
