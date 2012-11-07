@@ -9,6 +9,10 @@ $(document).ready(function(){
 	// Plugin Estado => Cidades
 	$('#estado').change(function(){
 		if( $(this).val() ) {
+			 // Dicas do Cadastro.
+			$('#cidade').removeAttr('data-original-title');
+			$("#cad select").tooltip({trigger:"focus",animation:"true",placement:"left"});
+				
 			$.getJSON('system/cidades.ajax.php?search=',{cod_estados: $(this).val(), ajax: 'true'}, function(j){
 				var options = '<option value=""></option>';	
 				for (var i = 0; i < j.length; i++) {
@@ -17,7 +21,11 @@ $(document).ready(function(){
 				$('#cidade').html(options).show();
 			});
 		} else {
-			//$('#cidade').html('<option value="">Escolha um estado</option>');
+			$('#cidade').html('<option value="">Cidade</option>');
+			
+			  	// Dicas do Cadastro.
+			$('#cidade').attr('data-original-title','Primeiro selecione o Estado.');
+			$("#cad select").tooltip({trigger:"focus",animation:"true",placement:"left"});
 		}
 	});
 	
@@ -129,8 +137,8 @@ $(document).ready(function(){
 	$("#cep").mask("99999-999");
 	
 	// Dicas do Cadastro.
-	$("#cad input").tooltip({trigger:"focus",animation:"true",placement:"right"});
-	
+	$("#cad input, #cad select#estado").tooltip({trigger:"focus",animation:"true",placement:"right"});
+	$("#cad select").tooltip({trigger:"focus",animation:"true",placement:"left"});
 	
 		
 });

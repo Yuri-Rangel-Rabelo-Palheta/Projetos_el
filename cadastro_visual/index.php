@@ -95,15 +95,15 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
-                            	<select name="" id="cidade" class="input-medium">
-                                	<option value="">Escolha Estado-></option>
+                            	<select name="" id="cidade" class="input-medium" data-original-title="Primeiro selecione o Estado.">
+                                	<option value="">Cidade</option>
                                     <?php 
 										if($_SERVER['SERVER_NAME']=="localhost"){
 											echo '<option value="29">Teste</option>';
 											}
 									 ?>
                                 </select>
-	                        	<select name="" id="estado" class="input-mini">
+	                        	<select name="" id="estado" class="input-mini" data-original-title="Estado">
                                 	<option value=""></option>
                                 	<?php 
 									get_estados(); 
