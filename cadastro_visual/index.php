@@ -178,7 +178,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         </div>
                         <div class="control-group">
                             <div class="controls">
-                            	<textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-xlarge"></textarea>
+                            	<textarea name="" id="mens" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-xlarge"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn" id="cont_bt"><i class="icon-envelope"></i> Enviar</button>	
