@@ -7,6 +7,19 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mod.css">
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36286141-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
   </head>
   <body data-spy="scroll" data-target=".navbar">
     	<div class="navbar navbar-fixed-top">
@@ -105,9 +118,33 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                                 </select>
 	                        	<select name="" id="estado" class="input-mini" data-original-title="Estado">
                                 	<option value=""></option>
-                                	<?php 
-									get_estados(); 
-									?>
+                                	<option value="1">AC</option>
+									<option value="2">AL</option>
+									<option value="4">AM</option>
+									<option value="3">AP</option>
+									<option value="5">BA</option>
+									<option value="6">CE</option>
+									<option value="7">DF</option>
+									<option value="8">ES</option>
+									<option value="10">GO</option>
+									<option value="11">MA</option>
+									<option value="14">MG</option>
+									<option value="13">MS</option>
+									<option value="12">MT</option>
+									<option value="15">PA</option>
+									<option value="16">PB</option>
+									<option value="18">PE</option>
+									<option value="19">PI</option>
+									<option value="17">PR</option>
+									<option value="20">RJ</option>
+									<option value="21">RN</option>
+									<option value="23">RO</option>
+									<option value="9">RR</option>
+									<option value="22">RS</option>
+									<option value="25">SC</option>
+									<option value="27">SE</option>
+									<option value="26">SP</option>
+									<option value="24">TO</option>
 	                        		
 	                        	</select>
 	                        </div>
