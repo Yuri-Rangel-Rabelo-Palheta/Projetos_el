@@ -31,6 +31,7 @@
                         	<li><a href="#origem">A Origem</a></li>
                         	<li><a href="#cadastro">Cadastro</a></li>
                             <li><a href="#contato">Contato</a></li>
+                            <li><a href="#apoio">Apoio</a></li>
                             <li><a href="http://espiritolivrerpg.blogspot.com/" target="_blank">Blog</a></li>
                         </ul>
                     <a href="" id="titulo_topo" class="brand">Espirito Livre - Clube de RPG</a>                        
@@ -108,7 +109,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
-                            	<select name="" id="cidade" class="input-medium" data-original-title="Primeiro selecione o Estado.">
+                            	<input name="" id="cidade" class="input-medium" >
                                 	<option value="">Cidade</option>
                                     <?php 
 										if($_SERVER['SERVER_NAME']=="localhost"){
@@ -221,6 +222,16 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <button type="submit" class="btn" id="cont_bt"><i class="icon-envelope"></i> Enviar</button>	
 	                </form>
 	            </div>
+            </div>
+        </div>
+        <div class="container" id="apoio">
+        	<div class="row">
+            	<div class="span12">
+                <h2>Apoio</h2>
+                <a href="http://www.fcptn.pa.gov.br/" target="_blank"><img src="img/centur.png" alt=""></a>
+                <a href="http://unzarpg.com/" target="_blank"><img src="img/unza.jpg" alt=""></a>
+                <a href="http://portal.retropunk.net/" target="_blank"><img src="img/retropunk.jpg" alt=""></a>
+                </div>
             </div>
         </div>
         <div class="container" id="footer">

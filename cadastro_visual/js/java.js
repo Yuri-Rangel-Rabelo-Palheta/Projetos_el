@@ -7,7 +7,7 @@ $(document).ready(function(){
 			});
 			
 	// Plugin Estado => Cidades
-	$('#estado').change(function(){
+	/*$('#estado').change(function(){
 		if( $(this).val() ) {
 			 // Dicas do Cadastro.
 			$('#cidade').removeAttr('data-original-title');
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			$("#cad select").tooltip({trigger:"focus",animation:"true",placement:"left"});
 		}
 	});
-	
+	*/
 	
 	$("#contato_enviando").on('hidden',function(){
 			$("#contato_enviando p").html('<center><img src="img/loading2.gif" alt=""></center>');
