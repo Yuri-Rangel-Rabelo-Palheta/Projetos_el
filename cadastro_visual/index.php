@@ -109,7 +109,7 @@ Nascia ali o Espírito Livre, um nome, um grupo, uma reunião de aventureiros, u
                         <div class="control-group">
 	                    	<label class="control-label" for="cidade">Cidade/Estado</label>
 	                        <div class="controls">
-                            	<input name="" id="cidade" class="input-medium" >
+                            	<input type="text" name="" id="cidade" class="input-medium" placeholder="Cidade">
                                 	<option value="">Cidade</option>
                                     <?php 
 										if($_SERVER['SERVER_NAME']=="localhost"){
